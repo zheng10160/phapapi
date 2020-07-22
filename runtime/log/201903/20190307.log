@@ -1,0 +1,12 @@
+2019-03-07 10:55:26|ERROR|App.Site.test|RedisException: Redis server went away in /Applications/senseplay/platform_api/phalapi/vendor/phalapi/kernal/src/Cache/RedisCache.php:61
+Stack trace:
+#0 /Applications/senseplay/platform_api/phalapi/vendor/phalapi/kernal/src/Cache/RedisCache.php(61): Redis->select(0)
+#1 /Applications/senseplay/platform_api/phalapi/public/index.php(12): PhalApi\Cache\RedisCache->__construct(NULL)
+#2 /Applications/senseplay/platform_api/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(201): {closure}()
+#3 /Applications/senseplay/platform_api/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(147): PhalApi\DependenceInjection->initService(Object(Closure))
+#4 /Applications/senseplay/platform_api/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(174): PhalApi\DependenceInjection->get('redis', NULL)
+#5 /Applications/senseplay/platform_api/phalapi/src/app/Api/Site.php(37): PhalApi\DependenceInjection->__get('redis')
+#6 [internal function]: App\Api\Site->test()
+#7 /Applications/senseplay/platform_api/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func(Array)
+#8 /Applications/senseplay/platform_api/phalapi/public/index.php(15): PhalApi\PhalApi->response()
+#9 {main}
