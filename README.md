@@ -20,6 +20,7 @@
  
 ## 3、快速安装
 
+## nginx   try_files $uri $uri/ /index.php?$uri&$args;
 ### composer一键安装
 
 使用composer创建项目的命令，可实现一键安装。
